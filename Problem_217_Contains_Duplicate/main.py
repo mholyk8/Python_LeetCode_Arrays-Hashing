@@ -14,7 +14,8 @@ def contains_duplicate(num_list: list[int]) -> bool:
                         # as hashsets don't allow duplicates to exist.
 
     for n in num_list:
-        # If a duplicate is found, end the search and return True.
+        # If "n" is found in "uniques" that means it was previously added and is a duplicate, return True.
+        # No further searching is required.
         if n in uniques:
             return True
 
