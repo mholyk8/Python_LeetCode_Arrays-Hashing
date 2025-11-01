@@ -1,5 +1,5 @@
 """
-LeetCode Problem 1. Two Sums
+LeetCode Problem 1. Two Sum
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add
 up to target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -10,7 +10,7 @@ Author: Matthew Holyk
 Created: Oct 27, 2025
 """
 
-def twoSum(nums: list[int], target: int) -> list[int]:
+def two_sum(nums: list[int], target: int) -> list[int]:
     diff_dict = {} # a dictionary keyed by elements of the input
 
     for i, n in enumerate(nums):
@@ -28,5 +28,5 @@ if __name__ == '__main__' :
     # target_input = 6
 
     user_target = int(input(f"What sum would you like searched in the collection {nums_list}? ").strip()) or target_input
-    indices = twoSum(nums_list, user_target)
+    indices = two_sum(nums_list, user_target)
     print(f"The indices {indices} hold the elements that add up to the target [{user_target}].")
